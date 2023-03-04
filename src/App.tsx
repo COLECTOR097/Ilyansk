@@ -1,10 +1,23 @@
-import React from 'react';
+import React, {FC} from 'react';
+import {Route, Routes} from "react-router-dom";
 
-const App = () => {
+import {Home, NotFound} from "./pages";
+import {Footer, Header} from "./components";
+
+import './styles/main.scss'
+
+const App: FC = () => {
   return (
-    <div className="App">
-      Hello world
-    </div>
+      <div>
+          <div className={'container'}>
+              <Header />
+              <Routes>
+                  <Route path={'/'} element={<Home />} />
+                  <Route path={'*'} element={<NotFound />} />
+              </Routes>
+          </div>
+          <Footer />
+      </div>
   );
 }
 

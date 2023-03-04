@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap");
+
+@import "colors";
+
+@import "./components/_header";
+@import "./components/_footer";
+@import "./components/_button";
+@import "./components/_categories";
+
+@import "./pages/_notFound";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1300px;
+
+  margin: 0 auto;
+}

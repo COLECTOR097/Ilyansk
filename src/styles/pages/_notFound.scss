@@ -1,0 +1,37 @@
+.notFound {
+  max-width: 642px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin: 0 auto;
+
+  &__title {
+    font-weight: 700;
+    font-size: 72px;
+
+    color: #BEBEBE;
+  }
+
+  &__error-code {
+    display: flex;
+    align-items: center;
+
+    span {
+      font-weight: 700;
+      font-size: 240px;
+
+      color: #BEBEBE;
+    }
+  }
+
+  &__desc {
+    font-size: 20px;
+    line-height: 27px;
+
+    color: #6B6B6B;
+  }
+}
+
