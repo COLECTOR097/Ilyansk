@@ -8,8 +8,11 @@
 @import "./components/_categories";
 
 @import "./pages/_notFound";
+@import "./pages/_home";
 
-* {
+*,
+*:before,
+*:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;

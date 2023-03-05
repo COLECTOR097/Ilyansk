@@ -1,0 +1,23 @@
+.slider {
+  position: relative;
+
+  .wrapper {
+    overflow: hidden;
+  }
+
+  &__container {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    transition: 0.2s linear;
+  }
+
+  &__slide {
+    height: 100%;
+
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
