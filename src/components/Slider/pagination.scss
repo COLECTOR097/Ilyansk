@@ -1,0 +1,32 @@
+.pagination {
+  position: absolute;
+  bottom: 32px;
+  left: 52px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .point {
+    width: 10px;
+    height: 10px;
+
+    cursor: pointer;
+
+    border-radius: 50px;
+    background-color: white;
+    opacity: 0.6;
+
+    transition: all 500ms ease-in;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .current {
+    width: 32px;
+
+    transition: all 500ms ease-in;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    opacity: 1;
+  }
+}
