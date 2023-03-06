@@ -10,30 +10,61 @@ import nextArrow from "../assets/images/svg/nextArrow.svg";
 const Home: FC = () => {
   return (
     <div className={"home"}>
-      <Slider
-        controllers={{
-          prevBtn: "slider__btn--prev",
-          nextBtn: "slider__btn--next",
-        }}
-      >
-        <div className={"slider__container"}>
-          <div className={"slider__slide"}>
-            <img src={slideImg} alt="" />
-          </div>
-          <div className={"slider__slide"}>
-            <img src={slideImg} alt="" />
-          </div>
-          <div className={"slider__slide"}>
-            <img src={slideImg} alt="" />
-          </div>
+      <div className="news">
+        <div className="news__main">
+          <Slider
+            controllers={{
+              prevBtn: "news__main--prev",
+              nextBtn: "news__main--next",
+            }}
+            pagination={true}
+            spaceBtw={5}
+          >
+            <div className={"slider__container"}>
+              <div className={"slider__slide "}>
+                <img src={slideImg} alt="" />
+                <div className={"desc"}>
+                  <div className="desc__title">
+                    Начните день с вкусной выпечи из нашей кулинарии
+                  </div>
+                  <button className="button desc__btn">
+                    Перейти к покупкам
+                  </button>
+                </div>
+              </div>
+              <div className={"slider__slide"}>
+                <img src={slideImg} alt="" />
+                <div className={"desc"}>
+                  <div className="desc__title">
+                    Начните день с вкусной выпечи из нашей кулинарии
+                  </div>
+                  <button className="button desc__btn">
+                    Перейти к покупкам
+                  </button>
+                </div>
+              </div>
+              <div className={"slider__slide"}>
+                <img src={slideImg} alt="" />
+                <div className={"desc"}>
+                  <div className="desc__title">
+                    Начните день с вкусной выпечи из нашей кулинарии
+                  </div>
+                  <button className="button desc__btn">
+                    Перейти к покупкам
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button className={"button news__main--btn news__main--prev"}>
+              <img src={prevArrow} alt="" />
+            </button>
+            <button className={"button news__main--btn news__main--next"}>
+              <img src={nextArrow} alt="" />
+            </button>
+          </Slider>
         </div>
-        <button className={"button slider__btn slider__btn--prev"}>
-          <img src={prevArrow} alt="" />
-        </button>
-        <button className={"button slider__btn slider__btn--next"}>
-          <img src={nextArrow} alt="" />
-        </button>
-      </Slider>
+        <div className="news__bonus"></div>
+      </div>
     </div>
   );
 };
