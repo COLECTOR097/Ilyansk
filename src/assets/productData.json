@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "imageUrl": "https://picsum.photos/304/220",
+    "stock": 1,
+    "desc": "Гранола Мюсли Bionova ягодные запечённые хрустящие, ",
+    "price": 129,
+    "discount": 99,
+    "weight": 400
+  },
+  {
+    "id": 2,
+    "imageUrl": "https://picsum.photos/304/220",
+    "stock": 1,
+    "desc": "Гранола Мюсли Bionova ягодные запечённые хрустящие, ",
+    "price": 129,
+    "discount": 99,
+    "weight": 400
+  },
+  {
+    "id": 3,
+    "imageUrl": "https://picsum.photos/304/220",
+    "stock": 1,
+    "desc": "Гранола Мюсли Bionova ягодные запечённые хрустящие, ",
+    "price": 129,
+    "discount": 99,
+    "weight": 400
+  },
+  {
+    "id": 4,
+    "imageUrl": "https://picsum.photos/304/220",
+    "stock": 1,
+    "desc": "Гранола Мюсли Bionova ягодные запечённые хрустящие, ",
+    "price": 129,
+    "discount": 99,
+    "weight": 400
+  },
+  {
+    "id": 5,
+    "imageUrl": "https://picsum.photos/304/220",
+    "stock": 1,
+    "desc": "Гранола Мюсли Bionova ягодные запечённые хрустящие, ",
+    "price": 129,
+    "discount": 99,
+    "weight": 400
+  },
+  {
+    "id": 6,
+    "imageUrl": "https://picsum.photos/304/220",
+    "stock": 1,
+    "desc": "Гранола Мюсли Bionova ягодные запечённые хрустящие, ",
+    "price": 129,
+    "discount": 99,
+    "weight": 400
+  },
+  {
+    "id": 7,
+    "imageUrl": "https://picsum.photos/304/220",
+    "stock": 1,
+    "desc": "Гранола Мюсли Bionova ягодные запечённые хрустящие, ",
+    "price": 129,
+    "discount": 99,
+    "weight": 400
+  },
+  {
+    "id": 8,
+    "imageUrl": "https://picsum.photos/304/220",
+    "stock": 1,
+    "desc": "Гранола Мюсли Bionova ягодные запечённые хрустящие, ",
+    "price": 129,
+    "discount": 99,
+    "weight": 400
+  }
+]

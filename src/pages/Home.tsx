@@ -1,69 +1,45 @@
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 
-import { Slider } from "../components";
+import { useAppDispatch } from "../redux/store";
+import { setItems } from "../redux/news/slice";
+import { setProducts } from "../redux/product/slice";
 
-import slideImg from "../assets/images/png/slide.png";
+import { News, Products } from "../components";
 
-import prevArrow from "../assets/images/svg/prevArrow.svg";
-import nextArrow from "../assets/images/svg/nextArrow.svg";
+import newsData from "../assets/newsSliderData.json";
+import productsData from "../assets/productData.json";
 
 const Home: FC = () => {
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(setItems(newsData));
+    dispatch(setProducts(productsData));
+  }, [dispatch]);
+
   return (
     <div className={"home"}>
-      <div className="news">
-        <div className="news__main">
-          <Slider
-            controllers={{
-              prevBtn: "news__main--prev",
-              nextBtn: "news__main--next",
-            }}
-            pagination={true}
-            spaceBtw={5}
-          >
-            <div className={"slider__container"}>
-              <div className={"slider__slide "}>
-                <img src={slideImg} alt="" />
-                <div className={"desc"}>
-                  <div className="desc__title">
-                    Начните день с вкусной выпечи из нашей кулинарии
-                  </div>
-                  <button className="button desc__btn">
-                    Перейти к покупкам
-                  </button>
-                </div>
-              </div>
-              <div className={"slider__slide"}>
-                <img src={slideImg} alt="" />
-                <div className={"desc"}>
-                  <div className="desc__title">
-                    Начните день с вкусной выпечи из нашей кулинарии
-                  </div>
-                  <button className="button desc__btn">
-                    Перейти к покупкам
-                  </button>
-                </div>
-              </div>
-              <div className={"slider__slide"}>
-                <img src={slideImg} alt="" />
-                <div className={"desc"}>
-                  <div className="desc__title">
-                    Начните день с вкусной выпечи из нашей кулинарии
-                  </div>
-                  <button className="button desc__btn">
-                    Перейти к покупкам
-                  </button>
-                </div>
-              </div>
-            </div>
-            <button className={"button news__main--btn news__main--prev"}>
-              <img src={prevArrow} alt="" />
-            </button>
-            <button className={"button news__main--btn news__main--next"}>
-              <img src={nextArrow} alt="" />
-            </button>
-          </Slider>
+      <News />
+      <div className="discount">
+        <div className="home__title">
+          <span>СКИДКИ</span>
+          <button className={"button home__title--btn"}>
+            Смотреть все
+            <svg
+              width="7"
+              height="12"
+              viewBox="0 0 7 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.69322 0.289794L6.67075 5.26732C7.05701 5.65559 7.05701 6.28273 6.67075 6.671L1.69322 11.6485C1.32092 11.9681 0.770393 11.9681 0.398088 11.6485C-0.0190492 11.2911 -0.0677967 10.662 0.289598 10.2449L4.56027 5.97413L0.289548 1.69347C-0.0967141 1.3052 -0.0967141 0.678064 0.289548 0.289794C0.677818 -0.0964679 1.305 -0.0964679 1.69322 0.289794Z"
+                fill="#DA9000"
+              />
+            </svg>
+          </button>
         </div>
-        <div className="news__bonus"></div>
+        <Products />
       </div>
     </div>
   );

@@ -1,21 +1,23 @@
 import React, { FC } from "react";
 
-import "./pagination.scss";
-import { moveSlideLeft, moveSlideRight } from "./utils/sliderMove";
+import { PaginationProps } from "./types";
 
-type PaginationProps = {
-  setOffset: (a: (currentOffset: number) => number) => void;
-  setSlide: (a: (currentNumber: number) => number) => void;
-  slide: number;
-  slidesLength: number;
-  spaceBtw?: number;
-};
+import "./pagination.scss";
+
+/**
+ * The pagination with a static style. It can be 'true' or 'false'.
+ *
+ * @param slide
+ * @param slidesLength
+ * @param moveSlideLeft
+ * @param moveSlideRight
+ * @constructor
+ */
 const Pagination: FC<PaginationProps> = ({
-  spaceBtw,
   slide,
-  setOffset,
-  setSlide,
   slidesLength,
+  moveSlideLeft,
+  moveSlideRight,
 }) => {
   const points = [];
 
@@ -26,11 +28,11 @@ const Pagination: FC<PaginationProps> = ({
   const moveSlideWithPag = (point: number) => {
     if (point > slide) {
       for (let i = 0; i < point - slide; i++) {
-        moveSlideLeft({ spaceBtw, setSlide, setOffset, slidesLength });
+        moveSlideLeft();
       }
     } else if (point < slide) {
       for (let i = 0; i < slide - point; i++) {
-        moveSlideRight({ spaceBtw, setSlide, setOffset });
+        moveSlideRight();
       }
     } else {
       return false;
